@@ -25,6 +25,7 @@ export const SaveData = () => {
   useEffect(()=>{
     Axios.get('https://todo-complete-backend.onrender.com/')
     .then(res=> {
+      console.log(res.data);
       if(res.status === 200){
           if(res.data.length>0){
             setUserdata(res.data)
