@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Axios } from 'axios'
 import Notify from 'simple-notify'
 import 'simple-notify/dist/simple-notify.min.css'
-import HashLoader from 'react-spinners/HashLoader'
+import { HashLoader } from 'react-spinners/HashLoader'
 import { useDispatch } from 'react-redux'
 import { updateDataValue } from '../features/Task_Redux'
 
