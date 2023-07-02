@@ -12,7 +12,7 @@ const app = express()
 
 app.use(express.json())
 
-app.use(cors({origin : "https://todo-complete-ass0.onrender.com/"}))
+app.use(cors({origin : "https://todo-complete-u6dv.onrender.com/"}))
 
 app.use('/',routes)
 
