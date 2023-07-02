@@ -54,7 +54,7 @@ export const FormInput = () => {
   const submitbtn = () =>{
     if(detail.task){
       if(topic.btnName === "Update"){
-        Axios.patch(`http://localhost:8000/${updateValue.id}`,{task:detail.task,status:updateValue.status})
+        Axios.patch(`https://todo-complete-backend.onrender.com/${updateValue.id}`,{task:detail.task,status:updateValue.status})
         .then(res => {
           if(res.status === 200){
             new Notify ({
@@ -90,7 +90,7 @@ export const FormInput = () => {
           }  
         })
       }else{
-        Axios.post("http://localhost:8000",{task:detail.task,status:detail.status})
+        Axios.post("https://todo-complete-backend.onrender.com/",{task:detail.task,status:detail.status})
       .then(res => {
         if(res.status === 200){
           new Notify ({
