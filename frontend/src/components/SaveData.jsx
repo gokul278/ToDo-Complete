@@ -23,7 +23,7 @@ export const SaveData = () => {
   })
 
   useEffect(()=>{
-    Axios.get('http://localhost:8000/')
+    Axios.get('https://todo-complete-backend.onrender.com/')
     .then(res=> {
       if(res.status === 200){
           if(res.data.length>0){
@@ -110,7 +110,7 @@ export const SaveData = () => {
 
 
   if(deleteData.id){
-    Axios.delete(`http://localhost:8000/${deleteData.id}`)
+    Axios.delete(`https://todo-complete-backend.onrender.com/${deleteData.id}`)
     .then(res=> {
       if(res.status === 200){
         new Notify ({
@@ -159,7 +159,7 @@ export const SaveData = () => {
 
 
   if(statusUpdate.id){
-    Axios.patch(`http://localhost:8000/${statusUpdate.id}`,{task:statusUpdate.task,status:statusUpdate.status})
+    Axios.patch(`https://todo-complete-backend.onrender.com/${statusUpdate.id}`,{task:statusUpdate.task,status:statusUpdate.status})
     .then(res => {
       if(res.status === 200){
         new Notify ({
