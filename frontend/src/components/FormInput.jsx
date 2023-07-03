@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Axios } from 'axios'
+import Axios from 'axios'
 import Notify from 'simple-notify'
 import 'simple-notify/dist/simple-notify.min.css'
 import { useSelector,useDispatch } from 'react-redux'
