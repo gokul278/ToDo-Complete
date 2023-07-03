@@ -127,8 +127,6 @@ export const FormInput = () => {
     }
   }
 
-  console.log(detail);
-
   const cancelbtn = () =>{
     setDetail({
       task:'',
