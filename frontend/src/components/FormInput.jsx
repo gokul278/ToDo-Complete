@@ -90,7 +90,7 @@ export const FormInput = () => {
           }  
         })
       }else{
-        Axios.post("https://todo-complete-backend.onrender.com/",{task:detail.task,status:detail.status})
+        Axios.post('https://todo-complete-backend.onrender.com/',{task:detail.task,status:detail.status})
       .then(res => {
         if(res.status === 200){
           new Notify ({
