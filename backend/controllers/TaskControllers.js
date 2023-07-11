@@ -3,12 +3,6 @@ const TaskModel = require("../models/TaskModel")
 const mongoose = require('mongoose')
 
 const getTask = async(req,res)=>{
-    res.setHeader('Access-Control-Allow-Credentials', true)
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    res.setHeader(
-      'Access-Control-Allow-Headers',
-      'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-    )
     const gettasks = await TaskModel.find({}).sort({createdAt:-1})
     res.status(200).json(gettasks)
 }
